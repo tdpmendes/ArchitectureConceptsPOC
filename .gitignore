@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ArchitectureConceptsPOC
+/ArchitectureConceptsPOC/bin/Debug/netcoreapp3.1
+/ArchitectureConceptsPOC/obj/Debug/netcoreapp3.1
+/ArchitectureConceptsPOC/obj/ConsoleApp1.csproj.nuget.g.targets
+/ArchitectureConceptsPOC/obj/ConsoleApp1.csproj.nuget.g.props
+/ArchitectureConceptsPOC/obj/ConsoleApp1.csproj.nuget.dgspec.json
+/ArchitectureConceptsPOC/obj
