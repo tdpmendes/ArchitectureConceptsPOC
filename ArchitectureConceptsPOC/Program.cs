@@ -1,6 +1,7 @@
 ﻿using ArchitectureConceptsPOC.D;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.ChainOfResponsability.Dtos;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.ChainOfResponsability.Handlers;
+using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Command;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Mediator;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.TemplateMethod;
 using ArchitectureConceptsPOC.DesignPatterns.Structural.Adapter;
@@ -161,6 +162,8 @@ namespace ArchitectureConceptsPOC
             service.TratarRequest(request);
             */
 
+            //Renato
+
             //FlyWeight
             /*
             Floresta floresta = new Floresta();
@@ -224,6 +227,27 @@ namespace ArchitectureConceptsPOC
 
             var profsD = professores.GetProfessoresWithDisciplinasAsync().Result;
             */
+
+            //Command
+            /*
+            TargetActionsModel doc = new TargetActionsModel("Doc File");
+            TargetActionsModel zip = new TargetActionsModel("Zip File");
+            ICommand oneCommand = new TargetActionOneCommand(doc);
+            ICommand anotherOneCommand = new TargetActionOneCommand(zip);
+
+            ICommand twoCommand = new TargetActionTwoCommand(doc);
+            ICommand threeCommand = new TargetActionThreeCommand(doc);
+
+            TargetActionsInvoker someInvoker = new TargetActionsInvoker(oneCommand, twoCommand, threeCommand);
+            TargetActionsInvoker someOtherInvoker = new TargetActionsInvoker(anotherOneCommand, twoCommand, threeCommand);
+
+            someInvoker.clickOne();
+            someOtherInvoker.clickOne();
+
+            someInvoker.clickTwo();
+            someOtherInvoker.clickTwo();
+            */
+
         }
     }
 }
