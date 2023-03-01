@@ -5,6 +5,7 @@ using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Command;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Iterator;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Mediator;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Memento;
+using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Observer;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.TemplateMethod;
 using ArchitectureConceptsPOC.DesignPatterns.Structural.Adapter;
 using ArchitectureConceptsPOC.DesignPatterns.Structural.Adapter.CodigoExistente;
@@ -285,6 +286,23 @@ namespace ArchitectureConceptsPOC
             ClientCodeThatHandlesAndUseMemento client = new ClientCodeThatHandlesAndUseMemento();
             client.DoSomething();
             */
+
+            //Observer
+            /*
+            var mostrador = new MostradorDeMensagem();
+            var salvador = new SalvadorDeMensagem();
+            var publisher = new Publisher();
+
+            publisher.Subscribe(mostrador);
+            publisher.Subscribe(salvador);
+
+            publisher.NotifyAllSubscribers(new DesignPatterns.Behavioral.Observer.Message()
+            {
+                Nome = "Eu sou a mensagem",
+                Idade = 2
+            }); 
+            */
+
 
         }
     }
