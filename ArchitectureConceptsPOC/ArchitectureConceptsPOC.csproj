@@ -17,4 +17,11 @@
     <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="5.18.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Behavioral\Observer\" />
+    <Folder Include="DesignPatterns\Behavioral\State\" />
+    <Folder Include="DesignPatterns\Behavioral\Strategy\" />
+    <Folder Include="DesignPatterns\Behavioral\Visitor\" />
+  </ItemGroup>
+
 </Project>

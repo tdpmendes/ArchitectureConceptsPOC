@@ -15,10 +15,10 @@ namespace ArchitectureConceptsPOC.DesignPatterns.Behavioral.Mediator
             _mediator = mediator;
         }
 
-        public void Execute()
+        public async void Execute()
         {
             var request = new SomeMediatorRequestDto();
-            _mediator.Send(request);
+            var response = await _mediator.Send(request);
         }
     }
 }
