@@ -6,7 +6,10 @@ using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Iterator;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Mediator;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Memento;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Observer;
+using ArchitectureConceptsPOC.DesignPatterns.Behavioral.State;
+using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Strategy;
 using ArchitectureConceptsPOC.DesignPatterns.Behavioral.TemplateMethod;
+using ArchitectureConceptsPOC.DesignPatterns.Behavioral.Visitor;
 using ArchitectureConceptsPOC.DesignPatterns.Structural.Adapter;
 using ArchitectureConceptsPOC.DesignPatterns.Structural.Adapter.CodigoExistente;
 using ArchitectureConceptsPOC.DesignPatterns.Structural.Bridge;
@@ -28,6 +31,7 @@ using ArchitectureConceptsPOC.SOLID.Singleton;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections.Generic;
 
 namespace ArchitectureConceptsPOC
 {
@@ -303,7 +307,62 @@ namespace ArchitectureConceptsPOC
             }); 
             */
 
+            //State
+            /*
+            DesignPatterns.Behavioral.State.Context context = 
+                new DesignPatterns.Behavioral.State.Context(new SomeState());
 
+            context.Execute();
+            context.StateChangeTo(new SomeOtherState());
+
+            context.Execute();
+            context.StateChangeTo(new StateThatRunsAndChangeItself(context));
+
+            context.Execute();
+            context.Execute();
+            */
+
+            //Visitor
+            /*
+            IList<IShape> allShapes = new List<IShape>();
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Circle());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Dot());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Dot());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Circle());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.CompoundGraphic());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.CompoundGraphic());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Dot());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Dot());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.Circle());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.CompoundGraphic());
+            allShapes.Add(new DesignPatterns.Behavioral.Visitor.CompoundGraphic());
+
+            var exportVisitor = new XMLExportVisitor();
+            foreach (var shape  in allShapes)
+            {
+                shape.Accept(exportVisitor);
+            }
+            */
+
+            //Strategy
+            /*
+            DataDto data = new DataDto();
+            DesignPatterns.Behavioral.Strategy.Context context = new DesignPatterns.Behavioral.Strategy.Context();
+            Console.Write("Entre um numero: ");
+            data.a = int.Parse(Console.ReadLine());
+
+            Console.Write("Entre outro numero: ");
+            data.b = int.Parse(Console.ReadLine());
+
+            context.SetStrategy(new Sum());
+            context.RunStrategy(data);
+
+            context.SetStrategy(new Diff());
+            context.RunStrategy(data);
+
+            context.SetStrategy(new Multiply());
+            context.RunStrategy(data);
+            */
         }
     }
 }
